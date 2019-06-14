@@ -25,17 +25,23 @@ In this example, we check if a transaction is confirmed on the [Devnet](root://g
 
 1. Require the IOTA client library
 
-    ```js
-    const Iota = require('@iota/core');
-    ```
+--------------------
+### JavaScript
+```js
+const Iota = require('@iota/core');
+```
+--------------------
 
 2. Create an instance of the IOTA object and use the `provider` field to connect to a node
 
-    ```js
-    const iota = Iota.composeAPI({
-    provider: 'https://nodes.devnet.iota.org:443'
-    });
-    ```
+--------------------
+### JavaScript
+```js
+const iota = Iota.composeAPI({
+provider: 'https://nodes.devnet.iota.org:443'
+});
+```
+--------------------
 
 3. Go to [devnet.thetangle.org](https://devnet.thetangle.org/) and find a confirmed transaction
 
@@ -45,10 +51,13 @@ In this example, we check if a transaction is confirmed on the [Devnet](root://g
 
 4. Pass the transaction hash to the [`getLatestInclusion()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getLatestInclusion) method to check if the IRI node's latest solid subtangle milestone approves it
 
-    ```js
-    iota.getLatestInclusion(['TRANSACTION HASH'])
-    .then(states => console.log(states));
-    ```
+--------------------
+### JavaScript
+```js
+iota.getLatestInclusion(['TRANSACTION HASH'])
+.then(states => console.log(states));
+```
+--------------------
 
     When you execute the file, you should see an array that contains the `true` boolean, meaning that the transaction is confirmed.
 
@@ -64,10 +73,13 @@ In this example, we check if a transaction is confirmed on the [Devnet](root://g
 
 6. Pass the transaction hash to the `getLatestInclusion()` method to check if the IRI node's latest solid subtangle milestone approves it
 
-    ```js
-    iota.getLatestInclusion(['TRANSACTION HASH'])
-    .then(states => console.log(states));
-    ```
+--------------------
+### JavaScript
+```js
+iota.getLatestInclusion(['TRANSACTION HASH'])
+.then(states => console.log(states));
+```
+--------------------
 
     When you execute the file, you should see an array that contains the `false` boolean, meaning that the transaction is not yet confirmed.
 
