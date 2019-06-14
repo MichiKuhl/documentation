@@ -20,36 +20,48 @@ In this example, we connect to a [Devnet node](root://getting-started/0.1/refere
 
 1. Require the IOTA libraries
 
-    ```js
-    const Iota = require('@iota/core');
-    ```
+--------------------
+### JavaScript
+```js
+const Iota = require('@iota/core');
+```
+--------------------
 
 2. Create an instance of the IOTA object and use the `provider` field to connect to a node
 
-    ```js
-    const iota = Iota.composeAPI({
-    provider: 'https://nodes.devnet.iota.org:443'
-    });
-    ```
+--------------------
+### JavaScript
+```js
+const iota = Iota.composeAPI({
+provider: 'https://nodes.devnet.iota.org:443'
+});
+```
+--------------------
 
 3. Create a variable to store a seed
 
-    ```js
-    const seed =
-    'PUETTSEITFEVEWCWBTSIZM9NKRGJEIMXTULBACGFRQK9IMGICLBKW9TTEVSDQMGWKBXPVCBMMCXWMNPDX';
-    ```
+--------------------
+### JavaScript
+```js
+const seed =
+'PUETTSEITFEVEWCWBTSIZM9NKRGJEIMXTULBACGFRQK9IMGICLBKW9TTEVSDQMGWKBXPVCBMMCXWMNPDX';
+```
+--------------------
 
-    :::info:
-    Any code that uses a seed is executed on the client side. Your seed never leaves your device.
-    :::
+:::info:
+Any code that uses a seed is executed on the client side. Your seed never leaves your device.
+:::
 
 4. Pass the `seed` variable to the `getNewAddress()` method to create an address
 
-    ```js
-    iota.getNewAddress(seed, {index: 0, security: 2})
-    .then(address => console.log(address));
-    ```
-
+--------------------
+### JavaScript
+```js
+iota.getNewAddress(seed, {index: 0, security: 2})
+.then(address => console.log(address));
+```
+--------------------
+    
     When you execute the file, you should see an address. If you execute the script again, you'll see the same address because its derived from the same seed, index and security level.
 
 Try changing the index and security level arguments in the `getNewAddress()` method to create a different address.
